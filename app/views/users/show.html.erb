@@ -1,0 +1,19 @@
+<h1>Welcome to your page <%= @user.name %></h2>
+
+<%if current_user== @user%>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @user.occupation %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<%end%>
+
