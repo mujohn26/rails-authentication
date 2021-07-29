@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_083440) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
+    t.index ["email"], name: "users_email_key", unique: true
   end
 
 end

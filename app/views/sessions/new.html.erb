@@ -1,6 +1,9 @@
 <div id="form-container">
 <h1>Sign in</h1>
-<%= form_with(model: @users) do |form|%>
+<%= form_with model: @users do |form|%>
+<div class="field-container success-msg">
+<%=notice %>
+</div>
 <div class = 'field-container'>
   <%= form.label :email%>
   <%= form.text_field :email , class: "text-field"%>

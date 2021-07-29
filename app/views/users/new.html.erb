@@ -1,6 +1,6 @@
 <div id="form-container">
 <h1>Sign up</h1>
-<%= form_with(model: @users) do |form|%>
+<%= form_with(model: @user) do |form|%>
 <div class = 'field-container'>
    <%= form.label :name%>
    <%= form.text_field :name, class: "text-field"%>
@@ -12,11 +12,16 @@
 <div class = 'field-container'>
   <%= form.label :email%>
   <%= form.text_field :email , class: "text-field"%>
+  <%@user.errors.full_messages_for(:email).each do |message|%>
+    <div class="error-msg"><%=message%></div>
+   <%end%>
 </div>
+
 <div class = 'field-container'>
   <%= form.label :password%>
   <%= form.password_field :password , class: "text-field"%>
 </div>
+
 
 <div class = 'field-container'>
   <%= form.submit "Signup" , class: "text-field"%>
